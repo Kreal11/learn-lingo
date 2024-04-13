@@ -5,6 +5,8 @@ import { getDatabase } from "firebase/database";
 const firebaseConfig = {
   apiKey: "AIzaSyDUgRo-2dTPogXF6EpCEWBqcxS8bEkDppQ",
   authDomain: "learn-lingo-44075.firebaseapp.com",
+  databaseURL:
+    "https://learn-lingo-44075-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "learn-lingo-44075",
   storageBucket: "learn-lingo-44075.appspot.com",
   messagingSenderId: "663459083405",
@@ -14,4 +16,4 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const database = getDatabase(app);
+export const dbase = getDatabase(app);
