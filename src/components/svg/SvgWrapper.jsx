@@ -1,10 +1,11 @@
-import sprite from "../../../public/sprite.svg";
+import { Svg } from "./SvgWrapper.styled";
+import sprite from "/public/sprite.svg";
 
 const SvgWrapper = ({ id }) => {
   return (
-    <svg>
+    <Svg $id={id}>
       <use xlinkHref={`${sprite}#${id}`}></use>
-    </svg>
+    </Svg>
   );
 };
 
