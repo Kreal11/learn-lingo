@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const BurgerWrapper = styled.div`
-  min-height: 100vh;
+  padding: 16px;
+  height: 50vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  text-align: center;
 `;

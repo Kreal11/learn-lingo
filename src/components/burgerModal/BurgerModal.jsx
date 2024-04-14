@@ -1,10 +1,12 @@
 import { useCallback, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { StyledCloseButton } from "../modal/Modal.styled";
 import {
   ContentBurgerWrapper,
+  StyledBurgerCloseButton,
   StyledBurgerWrapper,
 } from "./BurgerModal.styled";
+import { HeaderWrapper } from "../header/Header.styled";
+import SvgWrapper from "../svg/SvgWrapper";
 
 const rootModal = document.querySelector("#modal");
 
@@ -37,16 +39,7 @@ const BurgerModal = ({ children, closeModal }) => {
   if (rootModal) {
     return ReactDOM.createPortal(
       <StyledBurgerWrapper onClick={handleBackDrop}>
-        <ContentBurgerWrapper>
-          <StyledCloseButton
-            type="button"
-            title="modal close button"
-            onClick={closeModal}
-          >
-            Close
-          </StyledCloseButton>
-          {children}
-        </ContentBurgerWrapper>
+        <ContentBurgerWrapper>{children}</ContentBurgerWrapper>
       </StyledBurgerWrapper>,
       rootModal
     );

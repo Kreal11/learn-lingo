@@ -22,3 +22,16 @@ export const ContentBurgerWrapper = styled.div`
   min-height: 100vh;
   min-width: 100vw;
 `;
+
+export const StyledBurgerCloseButton = styled.button`
+  border: none;
+  padding: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  position: absolute;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
