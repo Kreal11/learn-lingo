@@ -7,4 +7,9 @@ export const BurgerWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  color: white;
+
+  a:visited {
+    color: white;
+  }
 `;

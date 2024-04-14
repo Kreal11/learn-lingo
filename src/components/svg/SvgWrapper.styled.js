@@ -19,4 +19,5 @@ export const Svg = styled.svg`
         return "50px";
     }
   }};
+  fill: ${(props) => props.$burger === "burger" && "white"};
 `;

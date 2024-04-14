@@ -1,7 +1,7 @@
 import { Svg } from "./SvgWrapper.styled";
 import sprite from "/sprite.svg";
 
-const SvgWrapper = ({ id, handleBurgerOpen }) => {
+const SvgWrapper = ({ id, handleBurgerOpen, $burger }) => {
   const isBurger = id === "burger-menu";
 
   const handleClick = () => {
@@ -11,7 +11,7 @@ const SvgWrapper = ({ id, handleBurgerOpen }) => {
   };
 
   return (
-    <Svg $id={id} onClick={handleClick}>
+    <Svg $id={id} onClick={handleClick} $burger={$burger}>
       <use xlinkHref={`${sprite}#${id}`}></use>
     </Svg>
   );

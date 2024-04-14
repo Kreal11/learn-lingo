@@ -11,7 +11,11 @@ const BurgerMenu = ({ closeModal }) => {
           <SvgWrapper id="ukraine" />
           <p>LearnLingo</p>
         </div>
-        <SvgWrapper id="burger-menu" handleBurgerOpen={closeModal} />
+        <SvgWrapper
+          id="burger-menu"
+          handleBurgerOpen={closeModal}
+          $burger="burger"
+        />
       </HeaderWrapper>
       <div>
         <NavLink to="/" onClick={closeModal}>
