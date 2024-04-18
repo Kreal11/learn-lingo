@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
   #root {
     padding: 16px;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     /* padding-right: 20px; */
   }
 
