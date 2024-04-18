@@ -28,6 +28,10 @@ export const HeaderWrapper = styled.div`
     ${({ $burger }) => $burger === "burger-menu" && "color: white"}
   }
 
+  a:hover {
+    color: darkorange;
+  }
+
   a:visited {
     color: #121417;
   }

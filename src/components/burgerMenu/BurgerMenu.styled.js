@@ -16,6 +16,10 @@ export const BurgerWrapper = styled.div`
   a:visited {
     color: white;
   }
+
+  a:hover {
+    color: darkorange;
+  }
 `;
 
 export const NavLinkWrapper = styled.div`

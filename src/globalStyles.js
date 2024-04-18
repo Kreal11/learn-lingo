@@ -60,12 +60,13 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    &:hover {
-      color: rgb(0, 250, 225);
-    }
     &:visited {
       text-decoration: none;
     }
+  }
+
+  a:hover {
+    color: darkorange;
   }
 
   button {
