@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { useDispatch, useSelector } from "react-redux";
 // import toast from "react-hot-toast";
 
@@ -43,15 +43,21 @@ import SvgWrapper from "../svg/SvgWrapper";
 import { toast } from "react-toastify";
 import Modal from "../modal/Modal";
 import BookingTrial from "../bookingTrial/BookingTrial";
+import { useDispatch, useSelector } from "react-redux";
+import { selectFavorites } from "../../redux/selectors";
+import {
+  addFavorite,
+  removeFavorite,
+} from "../../redux/favorites/favoritesSlice";
 
 const Card = ({ teacher, authUser }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [expandedTeacherId, setExpandedTeacherId] = useState(null);
   const [selectedTeacher, setSelectedTeacher] = useState(null);
-  const [isFavorite, setIsFavorite] = useState(false);
-  //   const { isOpen, openModal, closeModal } = useModal();
-  //   const dispatch = useDispatch();
-  //   const favorites = useSelector(selectFavorites);
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites);
+
+  const isFavorite = favorites.includes(teacher.id);
 
   const toggleModal = () => {
     setIsModalOpen((prevState) => !prevState);
@@ -73,14 +79,16 @@ const Card = ({ teacher, authUser }) => {
   const getButtonText = (teacherId) =>
     expandedTeacherId === teacherId ? "Hide more" : "Read More";
 
-  //   const isFavorite = favorites.includes(teacher.id);
-
   const onSwitchFavorite = () => {
     if (!authUser) {
       toast.error("At first, you must log in");
       return;
     }
-    setIsFavorite((prev) => !prev);
+    if (isFavorite) {
+      dispatch(removeFavorite(teacher.id));
+    } else {
+      dispatch(addFavorite(teacher.id));
+    }
   };
 
   return (

@@ -15,6 +15,7 @@ const Teachers = ({ authUser }) => {
       onValue(starCountRef, (snapshot) => {
         const userData = snapshot.val();
         console.log(userData);
+        localStorage.setItem("teachers", JSON.stringify(userData));
         setTeachers(userData);
       });
     };
@@ -27,7 +28,6 @@ const Teachers = ({ authUser }) => {
 
   return (
     <Container>
-      {/* {loadingState && !errorState && <Loader />} */}
       <CardList
         authUser={authUser}
         teachers={teachers?.slice(0, visibleTeachers)}

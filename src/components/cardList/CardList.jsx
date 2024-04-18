@@ -8,7 +8,7 @@ const CardList = ({ authUser, teachers }) => {
       {teachers &&
         Array.isArray(teachers) &&
         teachers.map((teacher) => (
-          <ListItem key={teacher?.lessons_done}>
+          <ListItem key={teacher?.id}>
             {teacher && <Card authUser={authUser} teacher={teacher} />}
           </ListItem>
         ))}

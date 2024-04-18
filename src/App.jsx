@@ -35,8 +35,8 @@ function App() {
         <Route
           path="favorites"
           element={
-            <PrivateRoute>
-              <Favorites />
+            <PrivateRoute authUser={authUser}>
+              <Favorites authUser={authUser} />
             </PrivateRoute>
           }
         />
