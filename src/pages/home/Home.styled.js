@@ -179,6 +179,7 @@ export const ImageMac = styled.img`
 
 export const AdvantagesSection = styled.div`
   background-image: url(${rectangleYellowNotDesktop});
+  background-position: center 20px;
   margin-top: 24px;
   width: 100%;
   height: 100%;
@@ -193,6 +194,7 @@ export const AdvantagesSection = styled.div`
 
   @media screen and (min-width: 768px) {
     background-image: url(${rectangleYellowDesktop});
+    background-position: initial;
     background-size: contain;
     height: 100%;
     padding: 25px;
