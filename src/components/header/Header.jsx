@@ -40,6 +40,14 @@ const Header = ({ authUser }) => {
     signOut(auth);
   };
 
+  const handleCloseLogin = () => {
+    setIsLogin(false);
+  };
+
+  const handleCloseRegister = () => {
+    setIsRegister(false);
+  };
+
   return (
     <>
       <HeaderWrapper>
@@ -75,12 +83,12 @@ const Header = ({ authUser }) => {
         </BurgerModal>
       )}
       {isLogin && (
-        <Modal>
+        <Modal closeModal={handleCloseLogin}>
           <Login />
         </Modal>
       )}
       {isRegister && (
-        <Modal>
+        <Modal closeModal={handleCloseRegister}>
           <Register />
         </Modal>
       )}
