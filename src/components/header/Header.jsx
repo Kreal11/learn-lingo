@@ -8,6 +8,7 @@ import { useMediaQuery } from "react-responsive";
 import {
   ButtonsWrapper,
   LogButton,
+  NavLinkWrapper,
   RegisterButton,
 } from "../burgerMenu/BurgerMenu.styled";
 import { useState } from "react";
@@ -58,25 +59,40 @@ const Header = ({ authUser }) => {
         {isMobileOrTablet ? (
           <SvgWrapper id="burger-menu" handleBurgerOpen={openModal} />
         ) : (
-          <ButtonsWrapper>
-            {!authUser && (
-              <>
-                <LogButton onClick={handleLoginOpen}>
+          <>
+            <NavLinkWrapper>
+              <NavLink to="/" onClick={closeModal}>
+                Home
+              </NavLink>
+              <NavLink to="teachers" onClick={closeModal}>
+                Teachers
+              </NavLink>
+              {authUser && (
+                <NavLink to="favorites" onClick={closeModal}>
+                  Favorites
+                </NavLink>
+              )}
+            </NavLinkWrapper>
+            <ButtonsWrapper>
+              {!authUser && (
+                <>
+                  <LogButton onClick={handleLoginOpen}>
+                    <SvgWrapper id="log" />
+                    Log In
+                  </LogButton>
+                  <RegisterButton onClick={handleRegisterOpen}>
+                    Register
+                  </RegisterButton>
+                </>
+              )}
+              {authUser && (
+                <LogButton onClick={handleLogOUt}>
                   <SvgWrapper id="log" />
-                  Log In
+                  Log out
                 </LogButton>
-                <RegisterButton onClick={handleRegisterOpen}>
-                  Register
-                </RegisterButton>
-              </>
-            )}
-            {authUser && (
-              <LogButton onClick={handleLogOUt}>
-                <SvgWrapper id="log" />
-                Log out
-              </LogButton>
-            )}
-          </ButtonsWrapper>
+              )}
+            </ButtonsWrapper>
+          </>
         )}
       </HeaderWrapper>
       {isOpen && (

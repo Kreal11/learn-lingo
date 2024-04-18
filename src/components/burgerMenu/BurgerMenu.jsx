@@ -54,7 +54,7 @@ const BurgerMenu = ({ closeModal, authUser }) => {
             $burger="burger"
           />
         </HeaderWrapper>
-        <NavLinkWrapper>
+        <NavLinkWrapper $burger="burger-menu">
           <NavLink to="/" onClick={closeModal}>
             Home
           </NavLink>
