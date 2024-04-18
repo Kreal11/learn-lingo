@@ -33,10 +33,12 @@ export const ContentWrapper = styled.div`
   border-radius: 20px;
   /* padding: 64px; */
   background-color: #ffffff;
+  padding: 32px;
+  max-width: 566px;
 
-  /* @media screen and (min-width: 768px) {
-    padding: 32px;
-  } */
+  @media screen and (min-width: 768px) {
+    padding: 64px;
+  }
 
   /* position: absolute;
   width: 290px;
@@ -54,11 +56,11 @@ export const ContentWrapper = styled.div`
   } */
 `;
 
-export const StyledCloseButton = styled.button`
+export const StyledCloseSvg = styled.svg`
   border: none;
   padding: 5px;
-  width: 18px;
-  height: 18px;
+  width: 32px;
+  height: 32px;
   background-color: transparent;
 
   position: absolute;
