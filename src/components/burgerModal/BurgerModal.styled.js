@@ -17,8 +17,8 @@ export const ContentBurgerWrapper = styled.div`
   position: relative;
   background-color: #1c1c1c;
   overflow: hidden;
-  border-radius: 20px;
-  padding: 60px;
+  /* border-radius: 20px;
+  padding: 60px; */
   min-height: 100vh;
   min-width: 100vw;
 `;

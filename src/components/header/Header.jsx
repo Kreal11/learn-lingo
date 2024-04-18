@@ -3,6 +3,7 @@ import { HeaderWrapper } from "./Header.styled";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
 import { useModal } from "../../hooks/useModal";
 import BurgerModal from "../burgerModal/BurgerModal";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const { isOpen, openModal, closeModal } = useModal();
@@ -10,10 +11,10 @@ const Header = () => {
   return (
     <>
       <HeaderWrapper>
-        <div>
+        <NavLink to="/">
           <SvgWrapper id="ukraine" />
           <p>LearnLingo</p>
-        </div>
+        </NavLink>
         <SvgWrapper id="burger-menu" handleBurgerOpen={openModal} />
       </HeaderWrapper>
       {isOpen && (

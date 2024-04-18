@@ -1,5 +1,11 @@
 import { NavLink } from "react-router-dom";
-import { BurgerWrapper } from "./BurgerMenu.styled";
+import {
+  BurgerWrapper,
+  ButtonsWrapper,
+  LoginButton,
+  NavLinkWrapper,
+  RegisterButton,
+} from "./BurgerMenu.styled";
 import { HeaderWrapper } from "../header/Header.styled";
 import SvgWrapper from "../svg/SvgWrapper";
 import { useState } from "react";
@@ -26,28 +32,31 @@ const BurgerMenu = ({ closeModal }) => {
     <>
       <BurgerWrapper>
         <HeaderWrapper>
-          <div>
+          <NavLink to="/" $burger="burger-menu">
             <SvgWrapper id="ukraine" />
             <p>LearnLingo</p>
-          </div>
+          </NavLink>
           <SvgWrapper
             id="burger-menu"
             handleBurgerOpen={closeModal}
             $burger="burger"
           />
         </HeaderWrapper>
-        <div>
+        <NavLinkWrapper>
           <NavLink to="/" onClick={closeModal}>
             Home
           </NavLink>
           <NavLink to="teachers" onClick={closeModal}>
             Teachers
           </NavLink>
-        </div>
-        <div>
-          <button onClick={handleLoginOpen}>Log In</button>
-          <button onClick={handleRegisterOpen}>Register</button>
-        </div>
+        </NavLinkWrapper>
+        <ButtonsWrapper>
+          <LoginButton onClick={handleLoginOpen} $burger="burger-menu">
+            <SvgWrapper id="log-in" />
+            Log In
+          </LoginButton>
+          <RegisterButton onClick={handleRegisterOpen}>Register</RegisterButton>
+        </ButtonsWrapper>
       </BurgerWrapper>
       {isLogin && (
         <Modal>
