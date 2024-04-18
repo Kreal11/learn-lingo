@@ -31,8 +31,4 @@ export const HeaderWrapper = styled.div`
   a:hover {
     color: darkorange;
   }
-
-  a:visited {
-    color: #121417;
-  }
 `;

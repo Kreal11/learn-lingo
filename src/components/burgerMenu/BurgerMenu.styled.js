@@ -57,7 +57,8 @@ export const LogButton = styled.button`
 
   &:hover {
     text-decoration: underline;
-    color: #2b2e35;
+    color: ${({ $burger }) =>
+      $burger === "burger-menu" ? "darkorange" : "#2b2e35"};
   }
 `;
 
