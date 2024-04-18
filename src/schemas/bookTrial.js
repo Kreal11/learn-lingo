@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-export const BookingLessonSchema = Yup.object().shape({
+export const BookingTrialSchema = Yup.object().shape({
   picked: Yup.string().required(
     "Kindly choose a purpose for learning English."
   ),

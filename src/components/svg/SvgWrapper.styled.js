@@ -6,6 +6,9 @@ export const Svg = styled.svg`
       case "ukraine":
       case "burger-menu":
         return "28px";
+      case "star":
+      case "opened-book":
+        return "16px";
       default:
         return "50px";
     }
@@ -15,6 +18,9 @@ export const Svg = styled.svg`
       case "ukraine":
       case "burger-menu":
         return "28px";
+      case "star":
+      case "opened-book":
+        return "16px";
       default:
         return "50px";
     }
