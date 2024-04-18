@@ -6,31 +6,31 @@ import NotFound from "./pages/notFound/NotFound";
 import Layout from "./layout/Layout";
 import Favorites from "./pages/favorites/Favorites";
 import { PrivateRoute } from "./components/privateRoute/PrivateRoute";
-// import { useEffect, useState } from "react";
-// import { auth } from "./firebaseConfig";
-// import { onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
+import { auth } from "./firebaseConfig";
+import { onAuthStateChanged } from "firebase/auth";
 
 function App() {
-  // const [authUser, setAuthUser] = useState(auth.currentUser);
+  const [authUser, setAuthUser] = useState(auth.currentUser);
 
-  // useEffect(() => {
-  //   const listen = onAuthStateChanged(auth, (user) => {
-  //     if (user) {
-  //       setAuthUser(user);
-  //     } else {
-  //       setAuthUser(null);
-  //     }
-  //   });
-  //   return () => {
-  //     listen();
-  //   };
-  // }, []);
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setAuthUser(user);
+      } else {
+        setAuthUser(null);
+      }
+    });
+    return () => {
+      listen();
+    };
+  }, []);
 
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="teachers" element={<Teachers />} />
+        <Route path="teachers" element={<Teachers authUser={authUser} />} />
         <Route
           path="favorites"
           element={

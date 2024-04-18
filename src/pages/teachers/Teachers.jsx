@@ -4,7 +4,7 @@ import { dbase } from "../../firebaseConfig";
 import { Container, LoadMoreButton } from "./Teachers.styled";
 import CardList from "../../components/cardList/CardList";
 
-const Teachers = () => {
+const Teachers = ({ authUser }) => {
   const [teachers, setTeachers] = useState([]);
   const [visibleTeachers, setVisibleTeachers] = useState(4);
   console.log(teachers);
@@ -29,7 +29,7 @@ const Teachers = () => {
     <Container>
       {/* {loadingState && !errorState && <Loader />} */}
       <CardList
-        // authUser={authUser}
+        authUser={authUser}
         teachers={teachers?.slice(0, visibleTeachers)}
       />
       {teachers.length > visibleTeachers && (

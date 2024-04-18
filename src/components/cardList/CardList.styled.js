@@ -8,8 +8,15 @@ export const List = styled.ul`
   align-items: center;
   gap: 48px;
 
+  margin-bottom: 20px;
+
   @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
     margin-top: 53px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 40px;
   }
 `;
 

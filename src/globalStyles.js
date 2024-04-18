@@ -11,6 +11,14 @@ export const GlobalStyle = createGlobalStyle`
 
   #root {
     padding: 16px;
+
+  @media screen and (min-width: 768px) {
+    padding: 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 20px 64px 32px 64px;
+  }
     /* max-width: 1440px; */
     /* padding-right: 20px; */
   }
