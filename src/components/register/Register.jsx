@@ -13,6 +13,7 @@ import {
   SubmitButton,
   Title,
 } from "../../styles/Auth.styled";
+import { toast } from "react-toastify";
 
 export const Register = ({ closeModal }) => {
   const [name, setName] = useState(false);
@@ -27,7 +28,7 @@ export const Register = ({ closeModal }) => {
         closeModal();
       })
       .catch(() => {
-        console.error("Apologies, an error occurred. Please try again later!");
+        toast.error("Oops, something went wrong. Please, try again later!");
       });
   };
 

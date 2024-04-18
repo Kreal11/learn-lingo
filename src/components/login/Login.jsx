@@ -13,6 +13,7 @@ import {
   SubmitButton,
   Title,
 } from "../../styles/Auth.styled";
+import { toast } from "react-toastify";
 
 export const Login = ({ closeModal }) => {
   const [email, setEmail] = useState(false);
@@ -26,7 +27,7 @@ export const Login = ({ closeModal }) => {
         closeModal();
       })
       .catch(() => {
-        console.error("Apologies, we were unable to locate your account");
+        toast.error("Email or password is wrong!");
       });
   };
 
