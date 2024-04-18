@@ -22,14 +22,14 @@ import {
 import { toast } from "react-toastify";
 import { BookingTrialSchema } from "../../schemas/bookTrial";
 
-const BookingTrial = ({ teacher, handleClose }) => {
+const BookingTrial = ({ teacher, close }) => {
   const [nameInputted, setNameInputted] = useState(false);
   const [emailInputted, setEmailInputted] = useState(false);
   const [phoneInputted, setPhoneInputted] = useState(false);
 
   const handleBookingSubmission = () => {
-    toast.success("Successfully finished!");
-    handleClose();
+    toast.success("Successfully submitted!");
+    close();
   };
   return (
     <ModalContainer>
@@ -66,7 +66,7 @@ const BookingTrial = ({ teacher, handleClose }) => {
         onSubmit={handleBookingSubmission}
         validationSchema={BookingTrialSchema}
       >
-        {({ values, errors, touched, handleChange, handleBlur }) => (
+        {() => (
           <StyledForm>
             <RadioGroup role="group" aria-labelledby="my-radio-group">
               <StyledLabel>
