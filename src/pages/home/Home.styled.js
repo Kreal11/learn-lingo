@@ -34,13 +34,14 @@
 
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import rectangleYellow3 from "../../img/rectangle-yellow3.png";
-// import rectangleYellow from "../../img/rectangle-yellow.png";
+// import rectangle from "../../images/Rectangle.png";
+import rectangleYellowNotDesktop from "../../images/rectangle-yellow-notDesktop.png";
+import rectangleYellowDesktop from "../../images/rectangle-yellow-desktop.png";
 
 export const Container = styled.div`
   /* width: 100%; */
-  /* padding-left: 15px; */
-  /* padding-right: 15px; */
+  /* padding-left: 15px;
+  padding-right: 15px; */
   margin: 0 auto;
 `;
 
@@ -177,6 +178,7 @@ export const ImageMac = styled.img`
 `;
 
 export const AdvantagesSection = styled.div`
+  background-image: url(${rectangleYellowNotDesktop});
   margin-top: 24px;
   width: 100%;
   height: 100%;
@@ -190,6 +192,7 @@ export const AdvantagesSection = styled.div`
   padding-bottom: 30px;
 
   @media screen and (min-width: 768px) {
+    background-image: url(${rectangleYellowDesktop});
     background-size: contain;
     height: 100%;
     padding: 25px;

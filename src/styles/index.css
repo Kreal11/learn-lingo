@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -43,7 +43,6 @@ body {
   min-height: 100vh;
   margin-top: 0;
   margin-left: 0;
-  /* margin-right: 0; */
 }
 
 svg,
@@ -51,4 +50,4 @@ img {
   display: block;
   height: auto;
   width: 100%;
-}
+} */
