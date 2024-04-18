@@ -21,17 +21,23 @@ const BurgerMenu = ({ closeModal, authUser }) => {
 
   const handleRegisterOpen = () => {
     setIsRegister(true);
-    // closeModal();
   };
 
   const handleLoginOpen = () => {
-    console.log(isLogin);
     setIsLogin(true);
-    // closeModal();
   };
 
   const handleLogOUt = () => {
     signOut(auth);
+    closeModal();
+  };
+
+  const handleCloseLogin = () => {
+    setIsLogin(false);
+  };
+
+  const handleCloseRegister = () => {
+    setIsRegister(false);
   };
 
   return (
@@ -73,13 +79,13 @@ const BurgerMenu = ({ closeModal, authUser }) => {
         </ButtonsWrapper>
       </BurgerWrapper>
       {isLogin && (
-        <Modal>
-          <Login />
+        <Modal closeModal={handleCloseLogin}>
+          <Login closeModal={handleCloseLogin} />
         </Modal>
       )}
       {isRegister && (
-        <Modal>
-          <Register />
+        <Modal closeModal={handleCloseRegister}>
+          <Register closeModal={handleCloseRegister} />
         </Modal>
       )}
     </>

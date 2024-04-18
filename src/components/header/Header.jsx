@@ -84,12 +84,12 @@ const Header = ({ authUser }) => {
       )}
       {isLogin && (
         <Modal closeModal={handleCloseLogin}>
-          <Login />
+          <Login closeModal={handleCloseLogin} />
         </Modal>
       )}
       {isRegister && (
         <Modal closeModal={handleCloseRegister}>
-          <Register />
+          <Register closeModal={handleCloseRegister} />
         </Modal>
       )}
     </>
