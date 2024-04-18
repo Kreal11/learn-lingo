@@ -59,9 +59,9 @@ const BookingTrial = ({ teacher, handleClose }) => {
       <Formik
         initialValues={{
           picked: "",
-          fullname: "",
+          fullName: "",
           email: "",
-          phoneNuber: "",
+          phoneNumber: "",
         }}
         onSubmit={handleBookingSubmission}
         validationSchema={BookingTrialSchema}
@@ -108,11 +108,11 @@ const BookingTrial = ({ teacher, handleClose }) => {
               <ErrorText name="picked" component="div" />
             </RadioGroup>
             <StyledInput
-              name="fullname"
+              name="fullName"
               placeholder={nameInputted ? "" : "Full Name"}
               onFocus={() => setNameInputted(true)}
             />
-            <ErrorText name="fullname" component="div" />
+            <ErrorText name="fullName" component="div" />
             <StyledInput
               type="email"
               name="email"
@@ -122,11 +122,11 @@ const BookingTrial = ({ teacher, handleClose }) => {
             <ErrorText name="email" component="div" />
             <StyledInput
               type="tel"
-              name="phoneNuber"
+              name="phoneNumber"
               placeholder={phoneInputted ? "" : "Phone number"}
               onFocus={() => setPhoneInputted(true)}
             />
-            <ErrorText name="phoneNuber" component="div" />
+            <ErrorText name="phoneNumber" component="div" />
             <StyledButton type="submit">Book</StyledButton>
           </StyledForm>
         )}

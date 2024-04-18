@@ -35,6 +35,8 @@ export const ContentWrapper = styled.div`
   background-color: #ffffff;
   padding: 32px;
   max-width: 566px;
+  max-height: 600px;
+  overflow-y: scroll;
 
   @media screen and (min-width: 768px) {
     padding: 64px;
