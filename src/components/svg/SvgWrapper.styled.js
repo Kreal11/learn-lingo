@@ -9,6 +9,8 @@ export const Svg = styled.svg`
       case "star":
       case "opened-book":
         return "16px";
+      case "log-in":
+        return "20px";
       default:
         return "50px";
     }
@@ -21,6 +23,8 @@ export const Svg = styled.svg`
       case "star":
       case "opened-book":
         return "16px";
+      case "log-in":
+        return "20px";
       default:
         return "50px";
     }

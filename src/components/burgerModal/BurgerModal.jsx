@@ -5,8 +5,6 @@ import {
   StyledBurgerCloseButton,
   StyledBurgerWrapper,
 } from "./BurgerModal.styled";
-import { HeaderWrapper } from "../header/Header.styled";
-import SvgWrapper from "../svg/SvgWrapper";
 
 const rootModal = document.querySelector("#modal");
 

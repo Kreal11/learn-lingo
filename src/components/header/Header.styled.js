@@ -6,13 +6,29 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   margin-bottom: 20px;
 
-  div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  @media screen and (min-width: 768px) {
+    padding: 0 32px;
+  }
 
+  @media screen and (min-width: 1440px) {
+    padding: 0 64px;
+  }
+
+  div {
     p {
       font-weight: 500;
     }
   }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #121417;
+    ${({ $burger }) => $burger === "burger-menu" && "color: white"}
+  }
+
+  /* a:visited {
+    color: #121417;
+  } */
 `;

@@ -31,8 +31,12 @@ export const ContentWrapper = styled.div`
   border: 1px solid rgba(244, 244, 244, 0.3);
   overflow: hidden;
   border-radius: 20px;
-  padding: 64px;
+  /* padding: 64px; */
   background-color: #ffffff;
+
+  /* @media screen and (min-width: 768px) {
+    padding: 32px;
+  } */
 
   /* position: absolute;
   width: 290px;
