@@ -81,13 +81,15 @@ const Card = ({ teacher, authUser }) => {
 
   const onSwitchFavorite = () => {
     if (!authUser) {
-      toast.error("At first, you must log in");
+      toast.error("You should be logged in for this feature");
       return;
     }
     if (isFavorite) {
       dispatch(removeFavorite(teacher.id));
+      toast.success("Teacher removed from favorites successfully");
     } else {
       dispatch(addFavorite(teacher.id));
+      toast.success("Teacher added to favorites successfully");
     }
   };
 
