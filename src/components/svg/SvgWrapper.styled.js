@@ -9,8 +9,11 @@ export const Svg = styled.svg`
       case "star":
       case "opened-book":
         return "16px";
-      case "log-in":
+      case "log":
         return "20px";
+      case "yellow-heart":
+      case "transparent-heart":
+        return "26px";
       default:
         return "50px";
     }
@@ -23,8 +26,11 @@ export const Svg = styled.svg`
       case "star":
       case "opened-book":
         return "16px";
-      case "log-in":
+      case "log":
         return "20px";
+      case "yellow-heart":
+      case "transparent-heart":
+        return "26px";
       default:
         return "50px";
     }

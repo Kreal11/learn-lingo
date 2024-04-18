@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import {
   BurgerWrapper,
   ButtonsWrapper,
-  LoginButton,
+  LogButton,
   NavLinkWrapper,
   RegisterButton,
 } from "./BurgerMenu.styled";
@@ -12,8 +12,10 @@ import { useState } from "react";
 import Modal from "../modal/Modal";
 import { Login } from "../login/Login";
 import { Register } from "../register/Register";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebaseConfig";
 
-const BurgerMenu = ({ closeModal }) => {
+const BurgerMenu = ({ closeModal, authUser }) => {
   const [isRegister, setIsRegister] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
 
@@ -26,6 +28,10 @@ const BurgerMenu = ({ closeModal }) => {
     console.log(isLogin);
     setIsLogin(true);
     // closeModal();
+  };
+
+  const handleLogOUt = () => {
+    signOut(auth);
   };
 
   return (
@@ -51,10 +57,18 @@ const BurgerMenu = ({ closeModal }) => {
           </NavLink>
         </NavLinkWrapper>
         <ButtonsWrapper>
-          <LoginButton onClick={handleLoginOpen} $burger="burger-menu">
-            <SvgWrapper id="log-in" />
-            Log In
-          </LoginButton>
+          {!authUser && (
+            <LogButton onClick={handleLoginOpen} $burger="burger-menu">
+              <SvgWrapper id="log" />
+              Log In
+            </LogButton>
+          )}
+          {authUser && (
+            <LogButton onClick={handleLogOUt} $burger="burger-menu">
+              <SvgWrapper id="log" />
+              Log out
+            </LogButton>
+          )}
           <RegisterButton onClick={handleRegisterOpen}>Register</RegisterButton>
         </ButtonsWrapper>
       </BurgerWrapper>

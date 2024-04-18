@@ -38,7 +38,7 @@ export const ButtonsWrapper = styled.div`
   }
 `;
 
-export const LoginButton = styled.button`
+export const LogButton = styled.button`
   ${({ $burger }) =>
     $burger === "burger-menu" ? "color: white" : "color: #121417"};
   font-weight: 700;

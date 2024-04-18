@@ -48,6 +48,7 @@ const Card = ({ teacher, authUser }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [expandedTeacherId, setExpandedTeacherId] = useState(null);
   const [selectedTeacher, setSelectedTeacher] = useState(null);
+  const [isFavorite, setIsFavorite] = useState(false);
   //   const { isOpen, openModal, closeModal } = useModal();
   //   const dispatch = useDispatch();
   //   const favorites = useSelector(selectFavorites);
@@ -79,11 +80,7 @@ const Card = ({ teacher, authUser }) => {
       toast.error("At first, you must log in");
       return;
     }
-    // if (isFavorite) {
-    //   dispatch(removeFavorite(teacher.id));
-    // } else {
-    //   dispatch(addFavorite(teacher.id));
-    // }
+    setIsFavorite((prev) => !prev);
   };
 
   return (
@@ -120,16 +117,16 @@ const Card = ({ teacher, authUser }) => {
             </InfoListItem>
             <li>
               {" "}
-              {/* {isFavorite && authUser ? (
+              {authUser && isFavorite ? (
                 <FavoriteButton type="button" onClick={onSwitchFavorite}>
-                  <HeartDel />
+                  <SvgWrapper id="yellow-heart" />
                 </FavoriteButton>
               ) : (
                 <FavoriteButton type="button" onClick={onSwitchFavorite}>
                   {" "}
-                  <FiHeart />{" "}
+                  <SvgWrapper id="transparent-heart" />
                 </FavoriteButton>
-              )} */}
+              )}
             </li>
           </InfoList>
         </InfoSection>
