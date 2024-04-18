@@ -14,6 +14,8 @@ export const Svg = styled.svg`
       case "yellow-heart":
       case "transparent-heart":
         return "26px";
+      case "close-x":
+        return "32px";
       default:
         return "50px";
     }
@@ -31,6 +33,8 @@ export const Svg = styled.svg`
       case "yellow-heart":
       case "transparent-heart":
         return "26px";
+      case "close-x":
+        return "32px";
       default:
         return "50px";
     }

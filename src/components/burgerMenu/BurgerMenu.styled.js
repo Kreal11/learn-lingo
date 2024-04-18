@@ -20,11 +20,12 @@ export const BurgerWrapper = styled.div`
 
 export const NavLinkWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ $burger }) =>
+    $burger === "burger-menu" ? "column" : "row"};
   justify-content: center;
   gap: 30px;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 export const ButtonsWrapper = styled.div`

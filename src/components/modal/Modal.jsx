@@ -1,11 +1,8 @@
 import ReactDOM from "react-dom";
 import { useCallback, useEffect } from "react";
+import sprite from "/sprite.svg";
 
-import {
-  ContentWrapper,
-  StyledCloseButton,
-  StyledWrapper,
-} from "./Modal.styled";
+import { ContentWrapper, StyledCloseSvg, StyledWrapper } from "./Modal.styled";
 
 const rootModal = document.querySelector("#modal");
 
@@ -39,13 +36,9 @@ const Modal = ({ children, closeModal }) => {
     return ReactDOM.createPortal(
       <StyledWrapper onClick={handleBackDrop}>
         <ContentWrapper>
-          <StyledCloseButton
-            type="button"
-            title="modal close button"
-            onClick={closeModal}
-          >
-            Close
-          </StyledCloseButton>
+          <StyledCloseSvg id="close-x" onClick={closeModal}>
+            <use xlinkHref={`${sprite}#close-x`} />
+          </StyledCloseSvg>
           {children}
         </ContentWrapper>
       </StyledWrapper>,
