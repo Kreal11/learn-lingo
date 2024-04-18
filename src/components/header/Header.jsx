@@ -60,10 +60,15 @@ const Header = ({ authUser }) => {
         ) : (
           <ButtonsWrapper>
             {!authUser && (
-              <LogButton onClick={handleLoginOpen}>
-                <SvgWrapper id="log" />
-                Log In
-              </LogButton>
+              <>
+                <LogButton onClick={handleLoginOpen}>
+                  <SvgWrapper id="log" />
+                  Log In
+                </LogButton>
+                <RegisterButton onClick={handleRegisterOpen}>
+                  Register
+                </RegisterButton>
+              </>
             )}
             {authUser && (
               <LogButton onClick={handleLogOUt}>
@@ -71,9 +76,6 @@ const Header = ({ authUser }) => {
                 Log out
               </LogButton>
             )}
-            <RegisterButton onClick={handleRegisterOpen}>
-              Register
-            </RegisterButton>
           </ButtonsWrapper>
         )}
       </HeaderWrapper>

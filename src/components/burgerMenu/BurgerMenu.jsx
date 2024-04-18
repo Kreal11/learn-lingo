@@ -61,13 +61,23 @@ const BurgerMenu = ({ closeModal, authUser }) => {
           <NavLink to="teachers" onClick={closeModal}>
             Teachers
           </NavLink>
+          {authUser && (
+            <NavLink to="favorites" onClick={closeModal}>
+              Favorites
+            </NavLink>
+          )}
         </NavLinkWrapper>
         <ButtonsWrapper>
           {!authUser && (
-            <LogButton onClick={handleLoginOpen} $burger="burger-menu">
-              <SvgWrapper id="log" />
-              Log In
-            </LogButton>
+            <>
+              <LogButton onClick={handleLoginOpen} $burger="burger-menu">
+                <SvgWrapper id="log" />
+                Log In
+              </LogButton>
+              <RegisterButton onClick={handleRegisterOpen}>
+                Register
+              </RegisterButton>
+            </>
           )}
           {authUser && (
             <LogButton onClick={handleLogOUt} $burger="burger-menu">
@@ -75,7 +85,6 @@ const BurgerMenu = ({ closeModal, authUser }) => {
               Log out
             </LogButton>
           )}
-          <RegisterButton onClick={handleRegisterOpen}>Register</RegisterButton>
         </ButtonsWrapper>
       </BurgerWrapper>
       {isLogin && (
