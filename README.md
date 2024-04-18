@@ -1,8 +1,8 @@
-# Project Description
+# Learn Lingo
 
 ## Description
 
-Create a web application for a company offering online language learning services. The application should consist of three main pages: "Home", "Teachers", and "Favorites".
+This application is made for a company offering online language learning services. The application consists of three main pages: "Home", "Teachers", and "Favorites".
 
 ## Home Page
 
@@ -35,10 +35,10 @@ Create a web application for a company offering online language learning service
 
 ### Design Source
 
-- Design: [Figma](https://www.figma.com/file/dewf5jVviSTuWMMyU3d8Mc/%D0%9F%D0%B5%D1%82-%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82-%D0%B4%D0%BB%D1%8F-%D0%9A%D0%A6?type=design&node-id=0-1&mode=design&t=jCmjSs9PeOjObYSc-0)
+- [Figma](https://www.figma.com/file/dewf5jVviSTuWMMyU3d8Mc/%D0%9F%D0%B5%D1%82-%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82-%D0%B4%D0%BB%D1%8F-%D0%9A%D0%A6?type=design&node-id=0-1&mode=design&t=jCmjSs9PeOjObYSc-0)
 
 ### Technical Requirements
 
-- Technical Specification: [Google Docs](https://docs.google.com/document/d/1ZB_MFgnnJj7t7OXtv5hESSwY6xRgVoACZKzgZczWc3Y/edit)
+- [Google Docs](https://docs.google.com/document/d/1ZB_MFgnnJj7t7OXtv5hESSwY6xRgVoACZKzgZczWc3Y/edit)
 
-Made with love by Kyrylo Shyrokov
+Made with 🧡 by Kyrylo Shyrokov
