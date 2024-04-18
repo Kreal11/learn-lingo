@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const BurgerWrapper = styled.div`
   padding: 16px;
-  height: 50vh;
+  padding-right: 24px;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
