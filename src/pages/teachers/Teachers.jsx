@@ -7,14 +7,12 @@ import CardList from "../../components/cardList/CardList";
 const Teachers = ({ authUser }) => {
   const [teachers, setTeachers] = useState([]);
   const [visibleTeachers, setVisibleTeachers] = useState(4);
-  console.log(teachers);
 
   useEffect(() => {
     const fetchData = () => {
       const starCountRef = ref(dbase, "/");
       onValue(starCountRef, (snapshot) => {
         const userData = snapshot.val();
-        console.log(userData);
         localStorage.setItem("teachers", JSON.stringify(userData));
         setTeachers(userData);
       });
