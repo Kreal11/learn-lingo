@@ -1,17 +1,26 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
+import { getFirestore } from "firebase/firestore";
+
+const API_KEY = import.meta.env.VITE_API_KEY;
+const AUTH_DOMAIN = import.meta.env.VITE_AUTH_DOMAIN;
+const DATABASE_URL = import.meta.env.VITE_DATABASE_URL;
+const PROJECT_ID = import.meta.env.VITE_PROJECT_ID;
+const STORAGE_BUCKET = import.meta.env.VITE_STORAGE_BUCKET;
+const MESSAGING_SENDER_ID = import.meta.env.VITE_MESSAGING_SENDER_ID;
+const APP_ID = import.meta.env.VITE_APP_ID;
+const MEASUREMENT_ID = import.meta.env.VITE_MEASUREMENT_ID;
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDUgRo-2dTPogXF6EpCEWBqcxS8bEkDppQ",
-  authDomain: "learn-lingo-44075.firebaseapp.com",
-  databaseURL:
-    "https://learn-lingo-44075-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "learn-lingo-44075",
-  storageBucket: "learn-lingo-44075.appspot.com",
-  messagingSenderId: "663459083405",
-  appId: "1:663459083405:web:05dd2162148b239b26dec4",
-  measurementId: "G-527H4Z7V9W",
+  apiKey: API_KEY,
+  authDomain: AUTH_DOMAIN,
+  databaseURL: DATABASE_URL,
+  projectId: PROJECT_ID,
+  storageBucket: STORAGE_BUCKET,
+  messagingSenderId: MESSAGING_SENDER_ID,
+  appId: APP_ID,
+  measurementId: MEASUREMENT_ID,
 };
 
 // Initialize Firebase
@@ -19,3 +28,4 @@ const app = initializeApp(firebaseConfig);
 export const dbase = getDatabase(app);
 
 export const auth = getAuth(app);
+export const firestore = getFirestore(app);
