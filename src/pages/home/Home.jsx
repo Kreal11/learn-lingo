@@ -19,7 +19,12 @@ import {
 } from "./Home.styled.js";
 
 import girlAvatar from "../../images/GirlAvatar.png";
+import girlAvatar2x from "../../images/GirlAvatar-2x.png";
+import girlAvatar3x from "../../images/GirlAvatar-3x.png";
+
 import mac from "../../images/Mac.png";
+import mac2x from "../../images/Mac-2x.png";
+import mac3x from "../../images/Mac-3x.png";
 
 const Home = () => {
   return (
@@ -41,8 +46,16 @@ const Home = () => {
 
         {/* Image */}
         <ImageContainer>
-          <ImageGirl src={girlAvatar} alt="logo" />
-          <ImageMac src={mac} alt="logo" />
+          <picture>
+            <source
+              srcSet={`${girlAvatar} 1x, ${girlAvatar2x} 2x, ${girlAvatar3x} 3x`}
+            />
+            <ImageGirl src={girlAvatar} alt="Girl" />
+          </picture>
+          <picture>
+            <source srcSet={`${mac} 1x, ${mac2x} 2x, ${mac3x} 3x`} />
+            <ImageMac src={mac} alt="Mac" />
+          </picture>
         </ImageContainer>
       </MainContent>
 
