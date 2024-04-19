@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Teachers from "./pages/teachers/Teachers";
-import "./styles/App.css";
 import NotFound from "./pages/notFound/NotFound";
 import Layout from "./layout/Layout";
 import Favorites from "./pages/favorites/Favorites";

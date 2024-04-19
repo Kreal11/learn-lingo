@@ -30,6 +30,12 @@ export const NavLinkWrapper = styled.div`
   gap: 30px;
   align-items: center;
   font-size: 16px;
+
+  a {
+    &.active {
+      color: darkorange;
+    }
+  }
 `;
 
 export const ButtonsWrapper = styled.div`

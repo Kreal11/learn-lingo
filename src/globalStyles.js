@@ -69,6 +69,7 @@ export const GlobalStyle = createGlobalStyle`
     color: darkorange;
   }
 
+
   button {
     cursor: pointer;
   }
